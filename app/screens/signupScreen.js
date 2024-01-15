@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, StyleSheet, Text, Button, TouchableOpacity, Image } from "react-native";
+import { SafeAreaView } from "react-native";
 import FormInput from "../conponents/FormInput";
 import FormButton from "../conponents/FormButton";
 import SocialButton from "../conponents/SocialButton";
@@ -101,7 +102,7 @@ const LoginScreen = ({ navigation }) => {
     }
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
 
             <Text style={styles.text} >Create an account</Text>
 
@@ -151,7 +152,7 @@ const LoginScreen = ({ navigation }) => {
             <TouchableOpacity style={styles.haveAccountButton} onPress={() => navigation.navigate('Login')}>
                 <Text style={styles.navButtonText}>Already Have Account?Login</Text>
             </TouchableOpacity>
-        </View>
+        </SafeAreaView>
     )
 }
 
