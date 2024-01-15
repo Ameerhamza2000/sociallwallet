@@ -7,7 +7,8 @@ const cors=require('cors');
 // routehandlers
 const userRegister=require('./routes/register');
 const userLogin=require('./routes/login');
-const expenseRouter=require('./routes/expense')
+const forgotPasswordRouter=require('./routes/forgotpassword')
+// const expenseRouter=require('./routes/expense')
 
 // env config
 dotenv.config();
@@ -22,7 +23,8 @@ connectDB();
 // api's
 app.use('/signup',userRegister);
 app.use('/login',userLogin);
-app.use('/expense',expenseRouter);
+app.use('/forgotpassword',forgotPasswordRouter);
+// app.use('/expense',expenseRouter);
 
 // server
 const PORT= process.env.PORT ||8000;
